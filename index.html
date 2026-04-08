@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutribites | Healthy Eating Made Simple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🥗 Nutri<span>bites</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Fuel Your Body with Nutribites</h1>
+            <p>Discover delicious, nutrient-dense recipes for a healthier lifestyle</p>
+            <button class="cta-button" onclick="scrollToRecipes()">Explore Recipes</button>
+        </div>
+    </header>
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="recipe-section">
+        <div class="container">
+            <h2>Our Healthy Recipes</h2>
+            <div class="recipe-grid" id="recipe-grid">
+                <!-- Recipe cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Nutribites</h2>
+            <p>Nutribites is your go-to destination for wholesome, nutritious recipes that don't compromise on taste. Our collection features simple, healthy meals crafted to nourish your body and delight your taste buds.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Have a recipe suggestion? We'd love to hear from you!</p>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="recipe-modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" onclick="closeRecipeModal()" aria-label="Close recipe details">×</button>
+            <div class="modal-body">
+                <span class="tag" id="modal-tag"></span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <p id="modal-details"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nutribites. All rights reserved. | Cooking Healthy, Living Happy</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
